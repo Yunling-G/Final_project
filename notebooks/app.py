@@ -10,7 +10,9 @@ def main():
 	menu = ['Customer Experience Center']
 	choice = st.sidebar.selectbox('Menu',menu)
 	text = st.text_input('Please enter your comment')
-	output = sentiment_generator(text)
-	st.text(output)
+
+	if st.button("Start"):
+		output = sentiment_generator(text)
+		st.text(output)
 if __name__ == '__main__':
 	main()
